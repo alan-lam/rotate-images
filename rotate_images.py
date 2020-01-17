@@ -15,7 +15,7 @@ for image in os.listdir('.'):
         continue
     curr_img = Image.open(image)
     orientation = curr_img._getexif()[274] # get image orientation
-    if orienation == 1:
+    if orientation == 1:
         continue
     # flip first, then rotate for certain orientations
     if orientation in [2, 4, 5, 7]:
